@@ -1,4 +1,4 @@
- settings:
+settings:
   update_interval: 150
   market_pairs:
     - BTC/USDT
