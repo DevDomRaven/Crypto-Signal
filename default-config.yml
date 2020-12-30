@@ -37,8 +37,8 @@ indicators:
           alert_frequency: once
           signal:
             - rsi
-          hot: 30
-          cold: 70
+          hot: 20
+          cold: 80
           candle_period: 5m
           period_count: 14
 
@@ -47,22 +47,26 @@ informants:
     bollinger_bands:
         - enabled: true
           signal:
-            - lowerband
-          candle_period: 4h
+            - upperband
+          candle_period: 5m
+        - enabled: true
+          signal:
+            - middleband
+          candle_period: 5m
         - enabled: true
           signal:
             - lowerband
-          candle_period: 1h
+          candle_period: 5m
     ema:
         - enabled: true
           signal:
             - ema
-          candle_period: 1h
+          candle_period: 5m
           period_count: 10
         - enabled: true
           signal:
             - ema
-          candle_period: 1h
+          candle_period: 5m
           period_count: 20
 
 crossovers:
